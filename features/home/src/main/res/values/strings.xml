@@ -1,0 +1,7 @@
+<resources>
+    <string name="avatar">Avatar</string>
+    <string name="home">Github Searcher</string>
+    <string name="my_work">My work</string>
+    <string name="github_logo">Github Logo</string>
+    <string name="search">Search User</string>
+</resources>

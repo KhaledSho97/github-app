@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.GithubApp" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#424242</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#6d6d6d</item>
+        <!-- Status bar. -->
+        <item name="android:statusBarColor">#121212</item>
+        <!--        Text      -->
+        <item name="android:textColor">@android:color/tab_indicator_text</item>
+    </style>
+</resources>

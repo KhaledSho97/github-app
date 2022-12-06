@@ -1,0 +1,26 @@
+plugins {
+    id 'java-library'
+    id 'kotlin'
+    id 'kotlin-kapt'
+}
+
+apply from: "$rootProject.projectDir/scripts/default_dependencies.gradle"
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    implementation libraries.kotlin
+    implementation libraries.coroutines
+    implementation libraries.pagingCommon
+
+    testImplementation testLibraries.coroutinesCore
+    testImplementation testLibraries.coroutinesTest
+    testImplementation testLibraries.jUnitApi
+    testRuntimeOnly testLibraries.jUnitEngine
+    testImplementation testLibraries.jUnitApi
+    testRuntimeOnly testLibraries.jUnitVintage
+    testImplementation testLibraries.mockk
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="key"
+            type="String" />
+
+        <variable
+            name="value"
+            type="String" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="listType"
+            type="com.khaledsh.features.profile.models.ListType" />
+
+        <variable
+            name="viewModel"
+            type="com.khaledsh.features.profile.viewmodel.ProfileViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:onClick="@{() -> viewModel.navigateToListFragment(listType)}"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView_profile_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{key}"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:text="30" />
+
+        <TextView
+            android:id="@+id/textView_profile_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{value}"
+            android:textColor="@color/white"
+            android:visibility="@{value == null ? View.GONE : View.VISIBLE, default=gone}"
+            tools:text="Repositories" />
+
+    </LinearLayout>
+
+</layout>

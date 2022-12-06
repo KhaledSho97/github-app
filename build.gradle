@@ -1,0 +1,27 @@
+ext {
+    sourceCompatibility = JavaVersion.VERSION_11
+}
+buildscript {
+    ext.kotlin = "1.4.32"
+    ext.navigation = "2.5.3"
+
+
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.20"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigation"
+    }
+}
+
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+apply from: "scripts/dependencies.gradle"

@@ -1,0 +1,16 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+apply from: "$rootProject.projectDir/scripts/module.gradle"
+apply from: "$rootProject.projectDir/scripts/default_dependencies.gradle"
+
+dependencies {
+    implementation project(':domain')
+
+    implementation libraries.navigation
+    implementation libraries.recyclerView
+    implementation libraries.glide
+    kapt annotationProcessors.glideCompiler
+    kapt "org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.5.0"
+}

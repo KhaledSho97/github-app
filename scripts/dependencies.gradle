@@ -1,0 +1,99 @@
+ext {
+
+    versions = [
+            minSdkVersion         : 21,
+            compileSdkVersion     : 33,
+            targetSdkVersion      : 33,
+            buildToolsVersion     : "33.0.0",
+            appCompatVersion      : "1.5.1",
+            material              : "1.7.0",
+            kotlin                : "1.7.20",
+            lifecycleVersion      : "2.5.1",
+            fragmentVersion       : "1.4.1",
+            constraintLayoutVesion: "2.1.4",
+            cardViewVersion       : "1.0.0",
+            multidex              : "2.0.1",
+            recyclerViewVersion   : "1.2.0",
+            roomVersion           : "2.4.3",
+            daggerVersion         : "2.29.1",
+            okHttpVersion         : "5.0.0-alpha.9",
+            retrofitVersion       : "2.9.0",
+            glideVersion          : "4.13.2",
+            coroutinesVersion     : "1.6.4",
+            jUnitVersion          : "5.7.1",
+            espressoVersion       : "3.2.0",
+            mockkVersion          : "1.10.0",
+            archCoreVersion       : "2.1.0",
+            databinding           : "4.1.3",
+            androidxRules         : "1.1.0",
+            viewPager2            : "1.0.0",
+            paging                : "3.1.0"
+    ]
+    libraries = [
+            appCompat       : "androidx.appcompat:appcompat:${versions.appCompatVersion}",
+            recyclerView    : "androidx.recyclerview:recyclerview:${versions.recyclerViewVersion}",
+            cardView        : "androidx.cardview:cardview:${versions.cardViewVersion}",
+            constraintLayout: "androidx.constraintlayout:constraintlayout:${versions.constraintLayoutVesion}",
+            multixDex       : "androidx.multidex:multidex:${versions.multidex}",
+            fragment        : "androidx.fragment:fragment-ktx:${versions.fragmentVersion}",
+            material        : "com.google.android.material:material:${versions.material}",
+            paging          : "androidx.paging:paging-runtime:${versions.paging}",
+            pagingCommon    : "androidx.paging:paging-common:${versions.paging}",
+            livedata        : "androidx.lifecycle:lifecycle-livedata-ktx:${versions.lifecycleVersion}",
+            viewModel       : "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycleVersion}",
+            kotlin          : "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${versions.kotlin}",
+            coroutines      : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutinesVersion}",
+            okHttpLogger    : "com.squareup.okhttp3:logging-interceptor:${versions.okHttpVersion}",
+            retrofit        : "com.squareup.retrofit2:retrofit:${versions.retrofitVersion}",
+            gson            : "com.squareup.retrofit2:converter-gson:${versions.retrofitVersion}",
+            glide           : "com.github.bumptech.glide:glide:${versions.glideVersion}",
+            dagger          : [
+                    "com.google.dagger:dagger:${versions.daggerVersion}",
+                    "com.google.dagger:dagger-android:${versions.daggerVersion}",
+                    "com.google.dagger:dagger-android-support:${versions.daggerVersion}"
+            ],
+            navigation      : [
+                    "androidx.navigation:navigation-fragment-ktx:$navigation",
+                    "androidx.navigation:navigation-ui-ktx:$navigation"
+            ],
+            room            : [
+                    "androidx.room:room-runtime:${versions.roomVersion}",
+                    "androidx.room:room-paging:${versions.roomVersion}",
+                    "androidx.room:room-ktx:${versions.roomVersion}"
+            ],
+            okHttp          : [
+                    "com.squareup.okhttp3:okhttp:${versions.okHttpVersion}",
+                    "com.squareup.okhttp3:logging-interceptor:${versions.okHttpVersion}"
+            ],
+    ]
+
+    annotationProcessors = [
+            glideCompiler  : "com.github.bumptech.glide:compiler:${versions.glideVersion}",
+            roomCompiler  : "androidx.room:room-compiler:${versions.roomVersion}",
+            daggerCompiler: [
+                    "com.google.dagger:dagger-compiler:${versions.daggerVersion}",
+                    "com.google.dagger:dagger-android-processor:${versions.daggerVersion}"
+            ]
+    ]
+
+    testLibraries = [
+            jUnitApi               : "org.junit.jupiter:junit-jupiter-api:${versions.jUnitVersion}",
+            jUnitEngine            : "org.junit.jupiter:junit-jupiter-engine:${versions.jUnitVersion}",
+            jUnitVintage           : "org.junit.vintage:junit-vintage-engine:${versions.jUnitVersion}",
+            jUnitAndroid           : "androidx.test.ext:junit:1.1.3",
+            fragmentTest           : "androidx.fragment:fragment-testing:${versions.fragmentVersion}",
+            multidexInstrumentation: "androidx.multidex:multidex-instrumentation:${versions.multidex}",
+            coroutinesCore         : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutinesVersion}",
+            coroutinesTest         : "org.jetbrains.kotlinx:kotlinx-coroutines-test:${versions.coroutinesVersion}",
+            espresso               : [
+                    "androidx.test.espresso:espresso-core:${versions.espressoVersion}",
+                    "androidx.test.espresso:espresso-contrib:${versions.espressoVersion}",
+            ],
+            mockk                  : "io.mockk:mockk:${versions.mockkVersion}",
+            androidMockk           : "io.mockk:mockk-android:${versions.mockkVersion}",
+            archCore               : "androidx.arch.core:core-testing:${versions.archCoreVersion}",
+            databinding            : "androidx.databinding:databinding-compiler:${versions.databinding}",
+            androidxRules          : "androidx.test:runner:${versions.androidxRules}",
+            navigation             : "androidx.navigation:navigation-testing:$navigation"
+    ]
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="profile_avatar_height">50dp</dimen>
+    <dimen name="profile_avatar_width">50dp</dimen>
+    <dimen name="profile_avatar_radius">8dp</dimen>
+
+</resources>
